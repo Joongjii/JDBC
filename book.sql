@@ -1,0 +1,1 @@
+select*from bookmanager.book;
