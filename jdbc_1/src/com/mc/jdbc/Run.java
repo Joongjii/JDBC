@@ -2,6 +2,7 @@ package com.mc.jdbc;
 
 import com.mc.jdbc.member.dao.MemberDao;
 import com.mc.jdbc.member.dto.Member;
+import com.mc.jdbc.view.MemberMenu;
 
 public class Run {
 	//JDBC API(application programming Interface)
@@ -13,6 +14,7 @@ public class Run {
 	//자바 개발자는 모든 데이터베이스를 공통된 형식으로 다룰 수 있다.
 	
 	public static void main(String[] args) {
+
 		MemberDao memberDao = new MemberDao();
 		Member member = memberDao.userAuthenticate("admin","1234");
 		System.out.println(member);
@@ -31,11 +33,11 @@ public class Run {
 		
 		// SQL injection 공격
 		//데이터를 오염시키기 위한 목적으로 쿼리가 오작동하도록 SQL쿼리를 주입
-//		int res = memberDao.changePassword("super", "' or 1=1 or user_id = '");
+//		int res = memberDao.changePassword(" super", "' or 1=1 or user_id = '");
 //		System.out.println(res);
-		
-		int res = memberDao.deleteUser("admin");
-		System.out.println(res);
+//		
+//		int res = memberDao.deleteUser("admin");
+//		System.out.println(res);
 		
 	}
 	

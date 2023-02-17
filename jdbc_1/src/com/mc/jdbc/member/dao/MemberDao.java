@@ -51,7 +51,7 @@ public class MemberDao {
 
          // 우리가 사용할 DBMS의 Driver 클래스를 JVM에 등록
          Class.forName("com.mysql.cj.jdbc.Driver");
-
+         System.out.println("드라이버 로딩 성공");
          // 2. 데이터베이스와 연결
          // jdbc:mysql//<ip>:<port>/<database이름>?queryString
          String url = "jdbc:mysql://localhost:3306/bookmanager?useUnicode=true&characterEncoding=utf8";
